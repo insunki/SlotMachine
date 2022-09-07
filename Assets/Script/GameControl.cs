@@ -49,11 +49,11 @@ public class GameControl : MonoBehaviour
             PlayerMoney.text = CommaText(HouseMoney).ToString();
         }
         BetMoney.text = CommaText(Betting).ToString();
-        if (!slot[0].slotsStop || !slot[1].slotsStop || !slot[2].slotsStop || !slot[3].slotsStop || !slot[4].slotsStop)
+        if (!slot[0].isSlotsStop || !slot[1].isSlotsStop || !slot[2].isSlotsStop || !slot[3].isSlotsStop || !slot[4].isSlotsStop)
         {
             isCheckResult = false;
         }
-        if (slot[0].slotsStop && slot[1].slotsStop && slot[2].slotsStop && slot[3].slotsStop && slot[4].slotsStop && !isCheckResult)
+        if (slot[0].isSlotsStop && slot[1].isSlotsStop && slot[2].isSlotsStop && slot[3].isSlotsStop && slot[4].isSlotsStop && !isCheckResult)
         {
             CheckResults();
         }
@@ -82,7 +82,7 @@ public class GameControl : MonoBehaviour
     public void Spinslot() // Start ¹öÆ°
     {
         isAutoMode = false;
-        if ((slot[0].slotsStop && slot[1].slotsStop && slot[2].slotsStop && slot[3].slotsStop && slot[4].slotsStop) && (Betting <= HouseMoney))
+        if ((slot[0].isSlotsStop && slot[1].isSlotsStop && slot[2].isSlotsStop && slot[3].isSlotsStop && slot[4].isSlotsStop) && (Betting <= HouseMoney))
         {
             StartCoroutine(StartSpin());
             HouseMoney -= Betting;
@@ -123,7 +123,7 @@ public class GameControl : MonoBehaviour
             for (int i = 0; i < 10; i++)
             {
                 AutoModeBtn.interactable = false;
-                if ((slot[0].slotsStop && slot[1].slotsStop && slot[2].slotsStop && slot[3].slotsStop && slot[4].slotsStop) && (Betting <= HouseMoney))
+                if ((slot[0].isSlotsStop && slot[1].isSlotsStop && slot[2].isSlotsStop && slot[3].isSlotsStop && slot[4].isSlotsStop) && (Betting <= HouseMoney))
                 {
                     StartCoroutine(StartSpin());
                     HouseMoney -= Betting;
@@ -131,7 +131,7 @@ public class GameControl : MonoBehaviour
                 }
                 while (!isEffect)
                 {
-                    if (slot[0].slotsStop && slot[1].slotsStop && slot[2].slotsStop && slot[3].slotsStop && slot[4].slotsStop && !isCheckResult)
+                    if (slot[0].isSlotsStop && slot[1].isSlotsStop && slot[2].isSlotsStop && slot[3].isSlotsStop && slot[4].isSlotsStop && !isCheckResult)
                     {
                         CheckResults();
                     }
@@ -152,7 +152,7 @@ public class GameControl : MonoBehaviour
         {
             AutoModeBtn.interactable = false;
             StartBtn.interactable = false;
-            if ((slot[0].slotsStop && slot[1].slotsStop && slot[2].slotsStop && slot[3].slotsStop && slot[4].slotsStop) && (Betting <= HouseMoney))
+            if ((slot[0].isSlotsStop && slot[1].isSlotsStop && slot[2].isSlotsStop && slot[3].isSlotsStop && slot[4].isSlotsStop) && (Betting <= HouseMoney))
             {
                 StartCoroutine(StartSpin());
                 bonus.num--;
@@ -165,7 +165,7 @@ public class GameControl : MonoBehaviour
             }
             while (!isEffect)
             {
-                if (slot[0].slotsStop && slot[1].slotsStop && slot[2].slotsStop && slot[3].slotsStop && slot[4].slotsStop && !isCheckResult)
+                if (slot[0].isSlotsStop && slot[1].isSlotsStop && slot[2].isSlotsStop && slot[3].isSlotsStop && slot[4].isSlotsStop && !isCheckResult)
                 {
                     CheckResults();
                 }
