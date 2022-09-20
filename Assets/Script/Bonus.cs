@@ -20,11 +20,8 @@ public class Bonus : MonoBehaviour
         game = FindObjectOfType<GameControl>();
     }
 
-    public void Bonus20Game()
+    void Bonuscontents()
     {
-        num = 20;
-        Count = 20;
-        multiply = 1f;
         BonusWindow.SetActive(false);
         BonusCountUI.SetActive(true);
         BonusCount.text = num.ToString();
@@ -32,59 +29,42 @@ public class Bonus : MonoBehaviour
         Logo.SetActive(false);
         BonusLogo.SetActive(true);
         game.AutoBtn();
+    }
+
+    public void Bonus20Game()
+    {
+        num = 20;
+        Count = 20;
+        multiply = 1f;
+        Bonuscontents();
     }
     public void Bonus15Game()
     {
         num = 15;
         Count = 15;
         multiply = 1.5f;
-        BonusWindow.SetActive(false);
-        BonusCountUI.SetActive(true);
-        BonusCount.text = num.ToString();
-        BonusResulteMoney.SetActive(true);
-        Logo.SetActive(false);
-        BonusLogo.SetActive(true);
-        game.AutoBtn();
+        Bonuscontents();
     }
     public void Bonus10Game()
     {
         num = 10;
         Count = 10;
         multiply = 2f;
-        BonusWindow.SetActive(false);
-        BonusCountUI.SetActive(true);
-        BonusCount.text = num.ToString();
-        BonusResulteMoney.SetActive(true);
-        Logo.SetActive(false);
-        BonusLogo.SetActive(true);
-        game.AutoBtn();
+        Bonuscontents();
     }
     public void Bonus8Game()
     {
         num = 8;
         Count = 8;
         multiply = 2.5f;
-        BonusWindow.SetActive(false);
-        BonusCountUI.SetActive(true);
-        BonusCount.text = num.ToString();
-        BonusResulteMoney.SetActive(true);
-        Logo.SetActive(false);
-        BonusLogo.SetActive(true);
-        game.AutoBtn();
-
+        Bonuscontents();
     }
     public void Bonus5Game()
     {
         num = 5;
         Count = 5;
         multiply = 3f;
-        BonusWindow.SetActive(false);
-        BonusCountUI.SetActive(true);
-        BonusCount.text = num.ToString();
-        BonusResulteMoney.SetActive(true);
-        Logo.SetActive(false);
-        BonusLogo.SetActive(true);
-        game.AutoBtn();
+        Bonuscontents();
     }
 
 }

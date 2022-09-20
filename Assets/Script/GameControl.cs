@@ -183,6 +183,38 @@ public class GameControl : MonoBehaviour
         bonus.BonusLogo.SetActive(false);
     }
 
+    public void ThreeWinContents()
+    {
+        StartCoroutine(ResulteMoneyDelay());
+        StartCoroutine(ThreeWin());
+        StartCoroutine(PlusHouseMoney());
+        StartCoroutine(fadeResulteMoney());
+    }
+
+    public void FourWinContents()
+    {
+        StartCoroutine(ResulteMoneyDelay());
+        StartCoroutine(fourWin());
+        StartCoroutine(PlusHouseMoney());
+        StartCoroutine(fadeResulteMoney());
+    }
+
+    public void FiveWinContents()
+    {
+        StartCoroutine(ResulteMoneyDelay());
+        StartCoroutine(fiveWin());
+        StartCoroutine(PlusHouseMoney());
+        StartCoroutine(fadeResulteMoney());
+    }
+
+    public void BonusWinContents()
+    {
+        StartCoroutine(ResulteMoneyDelay());
+        StartCoroutine(BonusEffect());
+        StartCoroutine(PlusHouseMoney());
+        StartCoroutine(fadeResulteMoney());
+    }
+
     public void CheckResults() // ΩΩ∑‘ ¥Á√∑ ¡§∫∏
     {
 
@@ -199,10 +231,7 @@ public class GameControl : MonoBehaviour
                             if (icon[0].number == 2)
                             {
                                 ResultePlayerMoney = Resultes[2].ResulteBet * Betting * 0.7f;
-                                StartCoroutine(ResulteMoneyDelay());
-                                StartCoroutine(BonusEffect());
-                                StartCoroutine(PlusHouseMoney());
-                                StartCoroutine(fadeResulteMoney());
+                                BonusWinContents();
                                 LineNum = 4;
                                 StartCoroutine(Resulte5LineDelay());
                             }
@@ -216,10 +245,7 @@ public class GameControl : MonoBehaviour
                                 {
                                     ResultePlayerMoney = Resultes[i].ResulteBet * Betting * 0.7f;
                                 }
-                                StartCoroutine(ResulteMoneyDelay());
-                                StartCoroutine(fiveWin());
-                                StartCoroutine(PlusHouseMoney());
-                                StartCoroutine(fadeResulteMoney());
+                                FiveWinContents();
                                 LineNum = 4;
                                 StartCoroutine(Resulte5LineDelay());
                             }
@@ -235,10 +261,7 @@ public class GameControl : MonoBehaviour
                             if (icon[0].number == 2)
                             {
                                 ResultePlayerMoney = Resultes[2].ResulteBet * Betting * 0.3f;
-                                StartCoroutine(ResulteMoneyDelay());
-                                StartCoroutine(BonusEffect());
-                                StartCoroutine(PlusHouseMoney());
-                                StartCoroutine(fadeResulteMoney());
+                                BonusWinContents();
                                 LineNum = 4;
                                 StartCoroutine(Resulte4LineDelay());
                             }
@@ -252,10 +275,7 @@ public class GameControl : MonoBehaviour
                                 {
                                     ResultePlayerMoney = Resultes[i].ResulteBet * Betting * 0.3f;
                                 }
-                                StartCoroutine(ResulteMoneyDelay());
-                                StartCoroutine(fourWin());
-                                StartCoroutine(PlusHouseMoney());
-                                StartCoroutine(fadeResulteMoney());
+                                FourWinContents();
                                 LineNum = 4;
                                 StartCoroutine(Resulte4LineDelay());
                             }
@@ -272,10 +292,7 @@ public class GameControl : MonoBehaviour
                         if (icon[0].number == 2)
                         {
                             ResultePlayerMoney = Resultes[2].ResulteBet * Betting * 0.1f;
-                            StartCoroutine(ResulteMoneyDelay());
-                            StartCoroutine(BonusEffect());
-                            StartCoroutine(PlusHouseMoney());
-                            StartCoroutine(fadeResulteMoney());
+                            BonusWinContents();
                             LineNum = 4;
                             StartCoroutine(Resulte3LineDelay());
                         }
@@ -289,10 +306,7 @@ public class GameControl : MonoBehaviour
                             {
                                 ResultePlayerMoney = Resultes[i].ResulteBet * Betting * 0.1f;
                             }
-                            StartCoroutine(ResulteMoneyDelay());
-                            StartCoroutine(ThreeWin());
-                            StartCoroutine(PlusHouseMoney());
-                            StartCoroutine(fadeResulteMoney());
+                            ThreeWinContents();
                             LineNum = 4;
                             StartCoroutine(Resulte3LineDelay());
                         }
@@ -313,10 +327,7 @@ public class GameControl : MonoBehaviour
                             if (icon[1].number == 2)
                             {
                                 ResultePlayerMoney = Resultes[2].ResulteBet * Betting * 0.7f;
-                                StartCoroutine(ResulteMoneyDelay());
-                                StartCoroutine(BonusEffect());
-                                StartCoroutine(PlusHouseMoney());
-                                StartCoroutine(fadeResulteMoney());
+                                BonusWinContents();
                                 LineNum = 5;
                                 StartCoroutine(Resulte5LineDelay());
                             }
@@ -330,10 +341,7 @@ public class GameControl : MonoBehaviour
                                 {
                                     ResultePlayerMoney = Resultes[i].ResulteBet * Betting * 0.7f;
                                 }
-                                StartCoroutine(ResulteMoneyDelay());
-                                StartCoroutine(fiveWin());
-                                StartCoroutine(PlusHouseMoney());
-                                StartCoroutine(fadeResulteMoney());
+                                FiveWinContents();
                                 LineNum = 5;
                                 StartCoroutine(Resulte5LineDelay());
                             }
@@ -349,10 +357,7 @@ public class GameControl : MonoBehaviour
                             if (icon[1].number == 2)
                             {
                                 ResultePlayerMoney = Resultes[2].ResulteBet * Betting * 0.3f;
-                                StartCoroutine(ResulteMoneyDelay());
-                                StartCoroutine(BonusEffect());
-                                StartCoroutine(PlusHouseMoney());
-                                StartCoroutine(fadeResulteMoney());
+                                BonusWinContents();
                                 LineNum = 5;
                                 StartCoroutine(Resulte4LineDelay());
                             }
@@ -366,10 +371,7 @@ public class GameControl : MonoBehaviour
                                 {
                                     ResultePlayerMoney = Resultes[i].ResulteBet * Betting * 0.3f;
                                 }
-                                StartCoroutine(ResulteMoneyDelay());
-                                StartCoroutine(fourWin());
-                                StartCoroutine(PlusHouseMoney());
-                                StartCoroutine(fadeResulteMoney());
+                                FourWinContents();
                                 LineNum = 5;
                                 StartCoroutine(Resulte4LineDelay());
                             }
@@ -386,10 +388,7 @@ public class GameControl : MonoBehaviour
                         if (icon[1].number == 2)
                         {
                             ResultePlayerMoney = Resultes[2].ResulteBet * Betting * 0.1f;
-                            StartCoroutine(ResulteMoneyDelay());
-                            StartCoroutine(BonusEffect());
-                            StartCoroutine(PlusHouseMoney());
-                            StartCoroutine(fadeResulteMoney());
+                            BonusWinContents();
                             LineNum = 5;
                             StartCoroutine(Resulte3LineDelay());
                         }
@@ -403,10 +402,7 @@ public class GameControl : MonoBehaviour
                             {
                                 ResultePlayerMoney = Resultes[i].ResulteBet * Betting * 0.1f;
                             }
-                            StartCoroutine(ResulteMoneyDelay());
-                            StartCoroutine(ThreeWin());
-                            StartCoroutine(PlusHouseMoney());
-                            StartCoroutine(fadeResulteMoney());
+                            ThreeWinContents();
                             LineNum = 5;
                             StartCoroutine(Resulte3LineDelay());
                         }
@@ -427,10 +423,7 @@ public class GameControl : MonoBehaviour
                             if (icon[2].number == 2)
                             {
                                 ResultePlayerMoney = Resultes[2].ResulteBet * Betting * 0.7f;
-                                StartCoroutine(ResulteMoneyDelay());
-                                StartCoroutine(BonusEffect());
-                                StartCoroutine(PlusHouseMoney());
-                                StartCoroutine(fadeResulteMoney());
+                                BonusWinContents();
                                 LineNum = 6;
                                 StartCoroutine(Resulte5LineDelay());
                             }
@@ -444,10 +437,7 @@ public class GameControl : MonoBehaviour
                                 {
                                     ResultePlayerMoney = Resultes[i].ResulteBet * Betting * 0.7f;
                                 }
-                                StartCoroutine(ResulteMoneyDelay());
-                                StartCoroutine(fiveWin());
-                                StartCoroutine(PlusHouseMoney());
-                                StartCoroutine(fadeResulteMoney());
+                                FiveWinContents();
                                 LineNum = 6;
                                 StartCoroutine(Resulte5LineDelay());
                             }
@@ -463,10 +453,7 @@ public class GameControl : MonoBehaviour
                             if (icon[2].number == 2)
                             {
                                 ResultePlayerMoney = Resultes[2].ResulteBet * Betting * 0.3f;
-                                StartCoroutine(ResulteMoneyDelay());
-                                StartCoroutine(BonusEffect());
-                                StartCoroutine(PlusHouseMoney());
-                                StartCoroutine(fadeResulteMoney());
+                                BonusWinContents();
                                 LineNum = 6;
                                 StartCoroutine(Resulte4LineDelay());
                             }
@@ -480,10 +467,7 @@ public class GameControl : MonoBehaviour
                                 {
                                     ResultePlayerMoney = Resultes[i].ResulteBet * Betting * 0.3f;
                                 }
-                                StartCoroutine(ResulteMoneyDelay());
-                                StartCoroutine(fourWin());
-                                StartCoroutine(PlusHouseMoney());
-                                StartCoroutine(fadeResulteMoney());
+                                FourWinContents();
                                 LineNum = 6;
                                 StartCoroutine(Resulte4LineDelay());
                             }
@@ -500,10 +484,7 @@ public class GameControl : MonoBehaviour
                         if (icon[2].number == 2)
                         {
                             ResultePlayerMoney = Resultes[2].ResulteBet * Betting * 0.1f;
-                            StartCoroutine(ResulteMoneyDelay());
-                            StartCoroutine(BonusEffect());
-                            StartCoroutine(PlusHouseMoney());
-                            StartCoroutine(fadeResulteMoney());
+                            BonusWinContents();
                             LineNum = 6;
                             StartCoroutine(Resulte3LineDelay());
                         }
@@ -517,10 +498,7 @@ public class GameControl : MonoBehaviour
                             {
                                 ResultePlayerMoney = Resultes[i].ResulteBet * Betting * 0.1f;
                             }
-                            StartCoroutine(ResulteMoneyDelay());
-                            StartCoroutine(ThreeWin());
-                            StartCoroutine(PlusHouseMoney());
-                            StartCoroutine(fadeResulteMoney());
+                            ThreeWinContents();
                             LineNum = 6;
                             StartCoroutine(Resulte3LineDelay());
                         }
@@ -541,10 +519,7 @@ public class GameControl : MonoBehaviour
                             if (icon[2].number == 2)
                             {
                                 ResultePlayerMoney = Resultes[2].ResulteBet * Betting * 0.7f;
-                                StartCoroutine(ResulteMoneyDelay());
-                                StartCoroutine(BonusEffect());
-                                StartCoroutine(PlusHouseMoney());
-                                StartCoroutine(fadeResulteMoney());
+                                BonusWinContents();
                                 LineNum = 0;
                                 StartCoroutine(Resulte5LineDelay());
                             }
@@ -558,10 +533,7 @@ public class GameControl : MonoBehaviour
                                 {
                                     ResultePlayerMoney = Resultes[i].ResulteBet * Betting * 0.7f;
                                 }
-                                StartCoroutine(ResulteMoneyDelay());
-                                StartCoroutine(fiveWin());
-                                StartCoroutine(PlusHouseMoney());
-                                StartCoroutine(fadeResulteMoney());
+                                FiveWinContents();
                                 LineNum = 0;
                                 StartCoroutine(Resulte5LineDelay());
                             }
@@ -577,10 +549,7 @@ public class GameControl : MonoBehaviour
                             if (icon[2].number == 2)
                             {
                                 ResultePlayerMoney = Resultes[2].ResulteBet * Betting * 0.3f;
-                                StartCoroutine(ResulteMoneyDelay());
-                                StartCoroutine(BonusEffect());
-                                StartCoroutine(PlusHouseMoney());
-                                StartCoroutine(fadeResulteMoney());
+                                BonusWinContents();
                                 LineNum = 0;
                                 StartCoroutine(Resulte4LineDelay());
                             }
@@ -594,10 +563,7 @@ public class GameControl : MonoBehaviour
                                 {
                                     ResultePlayerMoney = Resultes[i].ResulteBet * Betting * 0.3f;
                                 }
-                                StartCoroutine(ResulteMoneyDelay());
-                                StartCoroutine(fourWin());
-                                StartCoroutine(PlusHouseMoney());
-                                StartCoroutine(fadeResulteMoney());
+                                FourWinContents();
                                 LineNum = 0;
                                 StartCoroutine(Resulte4LineDelay());
                             }
@@ -614,10 +580,7 @@ public class GameControl : MonoBehaviour
                         if (icon[2].number == 2)
                         {
                             ResultePlayerMoney = Resultes[2].ResulteBet * Betting * 0.1f;
-                            StartCoroutine(ResulteMoneyDelay());
-                            StartCoroutine(BonusEffect());
-                            StartCoroutine(PlusHouseMoney());
-                            StartCoroutine(fadeResulteMoney());
+                            BonusWinContents();
                             LineNum = 0;
                             StartCoroutine(Resulte3LineDelay());
                         }
@@ -631,10 +594,7 @@ public class GameControl : MonoBehaviour
                             {
                                 ResultePlayerMoney = Resultes[i].ResulteBet * Betting * 0.1f;
                             }
-                            StartCoroutine(ResulteMoneyDelay());
-                            StartCoroutine(ThreeWin());
-                            StartCoroutine(PlusHouseMoney());
-                            StartCoroutine(fadeResulteMoney());
+                            ThreeWinContents();
                             LineNum = 0;
                             StartCoroutine(Resulte3LineDelay());
                         }
@@ -655,10 +615,7 @@ public class GameControl : MonoBehaviour
                             if (icon[0].number == 2)
                             {
                                 ResultePlayerMoney = Resultes[2].ResulteBet * Betting * 0.7f;
-                                StartCoroutine(ResulteMoneyDelay());
-                                StartCoroutine(BonusEffect());
-                                StartCoroutine(PlusHouseMoney());
-                                StartCoroutine(fadeResulteMoney());
+                                BonusWinContents();
                                 LineNum = 1;
                                 StartCoroutine(Resulte5LineDelay());
                             }
@@ -672,10 +629,7 @@ public class GameControl : MonoBehaviour
                                 {
                                     ResultePlayerMoney = Resultes[i].ResulteBet * Betting * 0.7f;
                                 }
-                                StartCoroutine(ResulteMoneyDelay());
-                                StartCoroutine(fiveWin());
-                                StartCoroutine(PlusHouseMoney());
-                                StartCoroutine(fadeResulteMoney());
+                                FiveWinContents();
                                 LineNum = 1;
                                 StartCoroutine(Resulte5LineDelay());
                             }
@@ -691,10 +645,7 @@ public class GameControl : MonoBehaviour
                             if (icon[0].number == 2)
                             {
                                 ResultePlayerMoney = Resultes[2].ResulteBet * Betting * 0.3f;
-                                StartCoroutine(ResulteMoneyDelay());
-                                StartCoroutine(BonusEffect());
-                                StartCoroutine(PlusHouseMoney());
-                                StartCoroutine(fadeResulteMoney());
+                                BonusWinContents();
                                 LineNum = 1;
                                 StartCoroutine(Resulte4LineDelay());
                             }
@@ -708,10 +659,7 @@ public class GameControl : MonoBehaviour
                                 {
                                     ResultePlayerMoney = Resultes[i].ResulteBet * Betting * 0.3f;
                                 }
-                                StartCoroutine(ResulteMoneyDelay());
-                                StartCoroutine(fourWin());
-                                StartCoroutine(PlusHouseMoney());
-                                StartCoroutine(fadeResulteMoney());
+                                FourWinContents();
                                 LineNum = 1;
                                 StartCoroutine(Resulte4LineDelay());
                             }
@@ -728,10 +676,7 @@ public class GameControl : MonoBehaviour
                         if (icon[0].number == 2)
                         {
                             ResultePlayerMoney = Resultes[2].ResulteBet * Betting * 0.1f;
-                            StartCoroutine(ResulteMoneyDelay());
-                            StartCoroutine(BonusEffect());
-                            StartCoroutine(PlusHouseMoney());
-                            StartCoroutine(fadeResulteMoney());
+                            BonusWinContents();
                             LineNum = 1;
                             StartCoroutine(Resulte3LineDelay());
                         }
@@ -745,10 +690,7 @@ public class GameControl : MonoBehaviour
                             {
                                 ResultePlayerMoney = Resultes[i].ResulteBet * Betting * 0.1f;
                             }
-                            StartCoroutine(ResulteMoneyDelay());
-                            StartCoroutine(ThreeWin());
-                            StartCoroutine(PlusHouseMoney());
-                            StartCoroutine(fadeResulteMoney());
+                            ThreeWinContents();
                             LineNum = 1;
                             StartCoroutine(Resulte3LineDelay());
                         }
@@ -769,10 +711,7 @@ public class GameControl : MonoBehaviour
                             if (icon[1].number == 2)
                             {
                                 ResultePlayerMoney = Resultes[2].ResulteBet * Betting * 0.7f;
-                                StartCoroutine(ResulteMoneyDelay());
-                                StartCoroutine(BonusEffect());
-                                StartCoroutine(PlusHouseMoney());
-                                StartCoroutine(fadeResulteMoney());
+                                BonusWinContents();
                                 LineNum = 2;
                                 StartCoroutine(Resulte5LineDelay());
                             }
@@ -786,10 +725,7 @@ public class GameControl : MonoBehaviour
                                 {
                                     ResultePlayerMoney = Resultes[i].ResulteBet * Betting * 0.7f;
                                 }
-                                StartCoroutine(ResulteMoneyDelay());
-                                StartCoroutine(fiveWin());
-                                StartCoroutine(PlusHouseMoney());
-                                StartCoroutine(fadeResulteMoney());
+                                FiveWinContents();
                                 LineNum = 2;
                                 StartCoroutine(Resulte5LineDelay());
                             }
@@ -805,10 +741,7 @@ public class GameControl : MonoBehaviour
                             if (icon[1].number == 2)
                             {
                                 ResultePlayerMoney = Resultes[2].ResulteBet * Betting * 0.3f;
-                                StartCoroutine(ResulteMoneyDelay());
-                                StartCoroutine(BonusEffect());
-                                StartCoroutine(PlusHouseMoney());
-                                StartCoroutine(fadeResulteMoney());
+                                BonusWinContents();
                                 LineNum = 2;
                                 StartCoroutine(Resulte4LineDelay());
                             }
@@ -822,10 +755,7 @@ public class GameControl : MonoBehaviour
                                 {
                                     ResultePlayerMoney = Resultes[i].ResulteBet * Betting * 0.3f;
                                 }
-                                StartCoroutine(ResulteMoneyDelay());
-                                StartCoroutine(fourWin());
-                                StartCoroutine(PlusHouseMoney());
-                                StartCoroutine(fadeResulteMoney());
+                                FourWinContents();
                                 LineNum = 2;
                                 StartCoroutine(Resulte4LineDelay());
                             }
@@ -842,10 +772,7 @@ public class GameControl : MonoBehaviour
                         if (icon[1].number == 2)
                         {
                             ResultePlayerMoney = Resultes[2].ResulteBet * Betting * 0.1f;
-                            StartCoroutine(ResulteMoneyDelay());
-                            StartCoroutine(BonusEffect());
-                            StartCoroutine(PlusHouseMoney());
-                            StartCoroutine(fadeResulteMoney());
+                            BonusWinContents();
                             LineNum = 2;
                             StartCoroutine(Resulte3LineDelay());
                         }
@@ -859,10 +786,7 @@ public class GameControl : MonoBehaviour
                             {
                                 ResultePlayerMoney = Resultes[i].ResulteBet * Betting * 0.1f;
                             }
-                            StartCoroutine(ResulteMoneyDelay());
-                            StartCoroutine(ThreeWin());
-                            StartCoroutine(PlusHouseMoney());
-                            StartCoroutine(fadeResulteMoney());
+                            ThreeWinContents();
                             LineNum = 2;
                             StartCoroutine(Resulte3LineDelay());
                         }
@@ -883,10 +807,7 @@ public class GameControl : MonoBehaviour
                             if (icon[1].number == 2)
                             {
                                 ResultePlayerMoney = Resultes[2].ResulteBet * Betting * 0.7f;
-                                StartCoroutine(ResulteMoneyDelay());
-                                StartCoroutine(BonusEffect());
-                                StartCoroutine(PlusHouseMoney());
-                                StartCoroutine(fadeResulteMoney());
+                                BonusWinContents();
                                 LineNum = 3;
                                 StartCoroutine(Resulte5LineDelay());
                             }
@@ -900,10 +821,7 @@ public class GameControl : MonoBehaviour
                                 {
                                     ResultePlayerMoney = Resultes[i].ResulteBet * Betting * 0.7f;
                                 }
-                                StartCoroutine(ResulteMoneyDelay());
-                                StartCoroutine(fiveWin());
-                                StartCoroutine(PlusHouseMoney());
-                                StartCoroutine(fadeResulteMoney());
+                                FiveWinContents();
                                 LineNum = 3;
                                 StartCoroutine(Resulte5LineDelay());
                             }
@@ -919,10 +837,7 @@ public class GameControl : MonoBehaviour
                             if (icon[1].number == 2)
                             {
                                 ResultePlayerMoney = Resultes[2].ResulteBet * Betting * 0.3f;
-                                StartCoroutine(ResulteMoneyDelay());
-                                StartCoroutine(BonusEffect());
-                                StartCoroutine(PlusHouseMoney());
-                                StartCoroutine(fadeResulteMoney());
+                                BonusWinContents();
                                 LineNum = 3;
                                 StartCoroutine(Resulte4LineDelay());
                             }
@@ -936,10 +851,7 @@ public class GameControl : MonoBehaviour
                                 {
                                     ResultePlayerMoney = Resultes[i].ResulteBet * Betting * 0.3f;
                                 }
-                                StartCoroutine(ResulteMoneyDelay());
-                                StartCoroutine(fourWin());
-                                StartCoroutine(PlusHouseMoney());
-                                StartCoroutine(fadeResulteMoney());
+                                FourWinContents();
                                 LineNum = 3;
                                 StartCoroutine(Resulte4LineDelay());
                             }
@@ -956,10 +868,7 @@ public class GameControl : MonoBehaviour
                         if (icon[1].number == 2)
                         {
                             ResultePlayerMoney = Resultes[2].ResulteBet * Betting * 0.1f;
-                            StartCoroutine(ResulteMoneyDelay());
-                            StartCoroutine(BonusEffect());
-                            StartCoroutine(PlusHouseMoney());
-                            StartCoroutine(fadeResulteMoney());
+                            BonusWinContents();
                             LineNum = 3;
                             StartCoroutine(Resulte3LineDelay());
                         }
@@ -973,10 +882,7 @@ public class GameControl : MonoBehaviour
                             {
                                 ResultePlayerMoney = Resultes[i].ResulteBet * Betting * 0.1f;
                             }
-                            StartCoroutine(ResulteMoneyDelay());
-                            StartCoroutine(ThreeWin());
-                            StartCoroutine(PlusHouseMoney());
-                            StartCoroutine(fadeResulteMoney());
+                            ThreeWinContents();
                             LineNum = 3;
                             StartCoroutine(Resulte3LineDelay());
                         }
@@ -997,10 +903,7 @@ public class GameControl : MonoBehaviour
                             if (icon[2].number == 2)
                             {
                                 ResultePlayerMoney = Resultes[2].ResulteBet * Betting * 0.7f;
-                                StartCoroutine(ResulteMoneyDelay());
-                                StartCoroutine(BonusEffect());
-                                StartCoroutine(PlusHouseMoney());
-                                StartCoroutine(fadeResulteMoney());
+                                BonusWinContents();
                                 LineNum = 7;
                                 StartCoroutine(Resulte5LineDelay());
                             }
@@ -1014,10 +917,7 @@ public class GameControl : MonoBehaviour
                                 {
                                     ResultePlayerMoney = Resultes[i].ResulteBet * Betting * 0.7f;
                                 }
-                                StartCoroutine(ResulteMoneyDelay());
-                                StartCoroutine(fiveWin());
-                                StartCoroutine(PlusHouseMoney());
-                                StartCoroutine(fadeResulteMoney());
+                                FiveWinContents();
                                 LineNum = 7;
                                 StartCoroutine(Resulte5LineDelay());
                             }
@@ -1033,10 +933,7 @@ public class GameControl : MonoBehaviour
                             if (icon[2].number == 2)
                             {
                                 ResultePlayerMoney = Resultes[2].ResulteBet * Betting * 0.3f;
-                                StartCoroutine(ResulteMoneyDelay());
-                                StartCoroutine(BonusEffect());
-                                StartCoroutine(PlusHouseMoney());
-                                StartCoroutine(fadeResulteMoney());
+                                BonusWinContents();
                                 LineNum = 7;
                                 StartCoroutine(Resulte4LineDelay());
                             }
@@ -1050,10 +947,7 @@ public class GameControl : MonoBehaviour
                                 {
                                     ResultePlayerMoney = Resultes[i].ResulteBet * Betting * 0.3f;
                                 }
-                                StartCoroutine(ResulteMoneyDelay());
-                                StartCoroutine(fourWin());
-                                StartCoroutine(PlusHouseMoney());
-                                StartCoroutine(fadeResulteMoney());
+                                FourWinContents();
                                 LineNum = 7;
                                 StartCoroutine(Resulte4LineDelay());
                             }
@@ -1070,10 +964,7 @@ public class GameControl : MonoBehaviour
                         if (icon[2].number == 2)
                         {
                             ResultePlayerMoney = Resultes[2].ResulteBet * Betting * 0.1f;
-                            StartCoroutine(ResulteMoneyDelay());
-                            StartCoroutine(BonusEffect());
-                            StartCoroutine(PlusHouseMoney());
-                            StartCoroutine(fadeResulteMoney());
+                            BonusWinContents();
                             LineNum = 7;
                             StartCoroutine(Resulte3LineDelay());
                         }
@@ -1087,10 +978,7 @@ public class GameControl : MonoBehaviour
                             {
                                 ResultePlayerMoney = Resultes[i].ResulteBet * Betting * 0.1f;
                             }
-                            StartCoroutine(ResulteMoneyDelay());
-                            StartCoroutine(ThreeWin());
-                            StartCoroutine(PlusHouseMoney());
-                            StartCoroutine(fadeResulteMoney());
+                            ThreeWinContents();
                             LineNum = 7;
                             StartCoroutine(Resulte3LineDelay());
                         }
@@ -1111,10 +999,7 @@ public class GameControl : MonoBehaviour
                             if (icon[0].number == 2)
                             {
                                 ResultePlayerMoney = Resultes[2].ResulteBet * Betting * 0.7f;
-                                StartCoroutine(ResulteMoneyDelay());
-                                StartCoroutine(BonusEffect());
-                                StartCoroutine(PlusHouseMoney());
-                                StartCoroutine(fadeResulteMoney());
+                                BonusWinContents();
                                 LineNum = 8;
                                 StartCoroutine(Resulte5LineDelay());
                             }
@@ -1128,10 +1013,7 @@ public class GameControl : MonoBehaviour
                                 {
                                     ResultePlayerMoney = Resultes[i].ResulteBet * Betting * 0.7f;
                                 }
-                                StartCoroutine(ResulteMoneyDelay());
-                                StartCoroutine(fiveWin());
-                                StartCoroutine(PlusHouseMoney());
-                                StartCoroutine(fadeResulteMoney());
+                                FiveWinContents();
                                 LineNum = 8;
                                 StartCoroutine(Resulte5LineDelay());
                             }
@@ -1147,10 +1029,7 @@ public class GameControl : MonoBehaviour
                             if (icon[0].number == 2)
                             {
                                 ResultePlayerMoney = Resultes[2].ResulteBet * Betting * 0.3f;
-                                StartCoroutine(ResulteMoneyDelay());
-                                StartCoroutine(BonusEffect());
-                                StartCoroutine(PlusHouseMoney());
-                                StartCoroutine(fadeResulteMoney());
+                                BonusWinContents();
                                 LineNum = 8;
                                 StartCoroutine(Resulte4LineDelay());
                             }
@@ -1164,10 +1043,7 @@ public class GameControl : MonoBehaviour
                                 {
                                     ResultePlayerMoney = Resultes[i].ResulteBet * Betting * 0.3f;
                                 }
-                                StartCoroutine(ResulteMoneyDelay());
-                                StartCoroutine(fourWin());
-                                StartCoroutine(PlusHouseMoney());
-                                StartCoroutine(fadeResulteMoney());
+                                FourWinContents();
                                 LineNum = 8;
                                 StartCoroutine(Resulte4LineDelay());
                             }
@@ -1184,10 +1060,7 @@ public class GameControl : MonoBehaviour
                         if (icon[0].number == 2)
                         {
                             ResultePlayerMoney = Resultes[2].ResulteBet * Betting * 0.1f;
-                            StartCoroutine(ResulteMoneyDelay());
-                            StartCoroutine(BonusEffect());
-                            StartCoroutine(PlusHouseMoney());
-                            StartCoroutine(fadeResulteMoney());
+                            BonusWinContents();
                             LineNum = 8;
                             StartCoroutine(Resulte3LineDelay());
                         }
@@ -1201,10 +1074,7 @@ public class GameControl : MonoBehaviour
                             {
                                 ResultePlayerMoney = Resultes[i].ResulteBet * Betting * 0.1f;
                             }
-                            StartCoroutine(ResulteMoneyDelay());
-                            StartCoroutine(ThreeWin());
-                            StartCoroutine(PlusHouseMoney());
-                            StartCoroutine(fadeResulteMoney());
+                            ThreeWinContents();
                             LineNum = 8;
                             StartCoroutine(Resulte3LineDelay());
                         }
